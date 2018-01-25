@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
+import { DataApiService } from '../services/data-api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataProvider: DataApiService) {
+
+  }
 
   ngOnInit() {
   }
